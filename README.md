@@ -21,7 +21,7 @@ https://github.com/chaniYehudit/test_Unleash/blob/8bf419546dbd3b8d7b2869e132a8ef
 **answer 7:**
 * GET /users/id=id1,id2,id3,id4,id5
 * PUT/users/{id}
-* POST /users [{"name": "hana"}, {"name": "sara"}]
+* POST /users/ [{"name": "hana"}, {"name": "sara"}]
 
 **answer 8:** 
 
