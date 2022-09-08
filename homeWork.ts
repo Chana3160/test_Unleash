@@ -1,5 +1,5 @@
 //answer 1
-//a
+
 async function getNumberFromServer() {
     //some api call to return a number from a remote server
     return 3;
@@ -12,7 +12,7 @@ async function myFunc() {
 }
  console.log(myFunc());
 //answer 2
-
+//a
 interface INode {
     name: string;
     children: INode[];
@@ -49,12 +49,6 @@ const getAllNamesByRecursion = (Inode: INode) => {
 
 }
 //b
-function collectWithRecursion(fn, node) {
-    return [
-      fn(node),
-      ...(node.children ?? []).flatMap(node => collectWithRecursion(fn, node)),
-    ];
-  }
 function collectWithoutRecursion(fn, node) {
     // start with the top node in the stack
     const stack = [node];
