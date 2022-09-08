@@ -1,6 +1,6 @@
 
 const express = require('express')
-const crypto = require('crypto')
+var CryptoJS = require("crypto-js")
 const fs = require('fs');
 const file  = require('./myFile.json')
 const app = express()
@@ -8,12 +8,9 @@ const port = 3000
 
 
 const middleware =(req, res, next) =>{
-
-    let body =req.body; 
-    
-    const hash = crypto.createHash('sha256').update(body).digest('base64');
-
- const result = JSON.stringify(hash);
+    let body =req.body;   
+    var hmac = CryptoJS.HmacSHA256(body)
+ const result = JSON.stringify(hmac);
   res.send(result)
   next()
 }
